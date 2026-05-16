@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#565e74",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "tertiary": "#994100",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "tertiary-container": "#c05400",
+                    "tertiary-fixed": "#ffdbca",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#ffb599",
+                    "background": "#f8f9ff",
+                    "on-tertiary-fixed": "#341100",
+                    "surface-bright": "#f8f9ff",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#7f2b00",
+                    "outline-variant": "#e2bfb2",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-primary": "#ffb599",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-container": "#cc4900",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "on-tertiary-fixed-variant": "#783200",
+                    "secondary-container": "#dae2fd",
+                    "surface-container-highest": "#d3e4fe",
+                    "primary": "#a33900",
+                    "surface-container-high": "#dce9ff",
+                    "primary-fixed": "#ffdbce",
+                    "on-surface-variant": "#5a4138",
+                    "outline": "#8e7166",
+                    "on-surface": "#0b1c30",
+                    "secondary-fixed": "#dae2fd",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-background": "#0b1c30",
+                    "on-primary-fixed": "#370e00",
+                    "on-secondary-container": "#5c647a",
+                    "inverse-surface": "#213145",
+                    "on-primary-container": "#fffbff",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#a73a00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "margin-mobile": "16px",
+                    "sm": "8px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "gutter": "24px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #f8f9ff;
+            color: #0b1c30;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-[240px] flex flex-col bg-surface-container-lowest dark:bg-surface-dim border-r border-outline-variant dark:border-outline shadow-sm z-50">
+<div class="flex flex-col h-full py-lg">
+<div class="px-lg mb-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Trackr</h1>
+<p class="font-label-sm text-label-sm text-secondary">Career Manager</p>
+</div>
+</div>
+</div>
+<nav class="flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary dark:text-primary-fixed-dim border-l-4 border-primary dark:border-primary-fixed-dim bg-primary-container/10" href="#">
+<span class="material-symbols-outlined" data-icon="work" style="font-variation-settings: 'FILL' 1;">work</span>
+<span class="font-label-md text-label-md">Applications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-label-md text-label-md">Documents</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-lg">
+<div class="p-md rounded-xl bg-surface-container-low border border-outline-variant">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-8 h-8 rounded-full bg-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJh3CP8NySesgyuOPTo5Oo83BhbEsMPd6i0VTVyYNLlxLP33gb9z0PWksCxYt98uCAq-WI00OWfdPOIZIauYaNGBIt4Xf2-Ylw7a6cvGLJloJpCkbmEbm_wfOgE_U2dNRjJSdWeKLTsm3aNVgBcQgGPtL-4f1yflnRH6c41VPDizDwJS1qztSNv3gq5DaUx0KSRjIJDBIT3eWVV_Ux_EtIzYMmTpKGjR_5z50W5Y_sKSmCTTZOPlaNTBGTFhRvsVUYRqE-vIYy0MJw"/>
+<div class="overflow-hidden">
+<p class="font-label-md text-label-md truncate">Alex Rivera</p>
+<p class="text-[10px] text-secondary truncate">Pro Plan</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-40 h-16 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm ml-[240px] w-[calc(100%-240px)]">
+<div class="flex justify-between items-center px-lg h-full">
+<div class="flex items-center gap-gutter flex-grow max-w-xl">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-full py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-primary transition-all font-body-sm text-body-sm" placeholder="Search applications..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="hover:bg-surface-container dark:hover:bg-surface-container-high rounded-full p-2 transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-surface-container dark:hover:bg-surface-container-high rounded-full p-2 transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-px bg-outline-variant mx-2"></div>
+<div class="flex items-center gap-2 px-2 py-1 rounded-full hover:bg-surface-container transition-colors cursor-pointer">
+<span class="font-label-md text-label-md text-on-surface">Alex Rivera</span>
+<img alt="User profile" class="w-8 h-8 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAruNKl5oXadBKwERwE9BQhwDbjmTfAVQG_Xe0_4pHblZOeglbHthMI1N1bI6kxN8U_sPDFQLL2MgOgoFW_gpLstvWX9b5UvpmP_wfopAr1s96SNSetf5ZgK9ug65gIqx0WMPoa_wqjYNP46BuSBzuy05itPGQsU_PxHay4KQjBBll4t8h_3JBxClJJ4iEPn-gGkT3sntQvcdkp_1Hd-uIlN7whCqY1WfLNv8Eu9vHhYgISnfCECWKbvfRloicUSzR6wSJctSiC2IQt"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-[240px] p-margin-desktop">
+<div class="max-w-[1200px] mx-auto">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 mb-lg text-secondary">
+<span class="font-label-sm text-label-sm">Applications</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<span class="font-label-md text-label-md text-primary">Senior Designer at Google</span>
+</div>
+<!-- Application Header -->
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-outline-variant shadow-sm mb-lg">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-lg">
+<div class="flex items-center gap-lg">
+<div class="w-16 h-16 rounded-xl bg-white border border-outline-variant flex items-center justify-center p-2 shadow-sm">
+<img alt="Google logo" class="w-full h-full object-contain" data-alt="The iconic multicolored Google 'G' logo presented in a crisp, high-resolution vector style on a clean white circular background. The lighting is neutral and even, highlighting the vibrant primary colors of red, yellow, green, and blue. The overall aesthetic is professional, modern, and synonymous with global technology leadership in a minimalist corporate interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjKzP7tMwyz3wbROKgEvV5r8OTCXUEsisuoQyBWOVJPBzZ0hwcsRHGGPOqiG1Nhja3NMT19AWzPP2aT7kdrqIeisb859eqFI80rHmt5EHDAKHBh7W1XbNd6GS0uAuCRwUyyL2E_NvV-t498YX-h43wd6LJWRUjtTCo9pLhmSdvEbi6unejBxGp1xIKzNJNrtDCIiLns3NfFAWnGTm5B8hMM64qhgQJzKmiVau6Diem40pwCkurn2I6yEnT6OuxeCEzfp4apjDnqqrg"/>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Senior Designer</h2>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-sm text-label-sm border border-tertiary/20">Interview Phase</span>
+</div>
+<p class="font-body-lg text-body-lg text-secondary">Google • Mountain View, CA (Hybrid)</p>
+</div>
+</div>
+<div class="flex gap-md">
+<button class="flex items-center gap-2 px-lg py-md border border-outline rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+                            Edit
+                        </button>
+<button class="flex items-center gap-2 px-lg py-md bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:opacity-90 transition-all shadow-sm">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                            Mark as Won
+                        </button>
+</div>
+</div>
+</div>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Main Content Column -->
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-gutter">
+<!-- Quick Info Cards -->
+<div class="grid grid-cols-3 gap-md">
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant">
+<p class="font-label-sm text-label-sm text-secondary mb-1 uppercase tracking-wider">Date Applied</p>
+<p class="font-headline-sm text-headline-sm text-on-surface">Oct 12, 2023</p>
+</div>
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant">
+<p class="font-label-sm text-label-sm text-secondary mb-1 uppercase tracking-wider">Method</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="groups">groups</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Referral</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant">
+<p class="font-label-sm text-label-sm text-secondary mb-1 uppercase tracking-wider">Location</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="location_on">location_on</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Mountain View</p>
+</div>
+</div>
+</div>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Job Description -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm col-span-2">
+<h3 class="font-headline-sm text-headline-sm mb-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="subject">subject</span>
+                                Job Description
+                            </h3>
+<div class="text-on-surface-variant font-body-md space-y-md">
+<p>Lead the visual design and UX strategy for core workspace products. You will collaborate with cross-functional teams to define and implement innovative solutions for the product direction, visuals, and experience.</p>
+<ul class="list-disc pl-lg space-y-xs">
+<li>Conceptualize original ideas that bring simplicity to complex design roadblocks</li>
+<li>Create wireframes, storyboards, and user flows</li>
+<li>Define and maintain a robust design system</li>
+</ul>
+</div>
+</div>
+<!-- Documents Sent -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm col-span-2">
+<h3 class="font-headline-sm text-headline-sm mb-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="folder_zip">folder_zip</span>
+                                Documents Sent
+                            </h3>
+<div class="space-y-sm">
+<div class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="description">description</span>
+<span class="font-label-md text-label-md">Resume_Alex_v4.pdf</span>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" data-icon="download">download</span>
+</div>
+<div class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="link">link</span>
+<span class="font-label-md text-label-md">Portfolio_2023.link</span>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" data-icon="open_in_new">open_in_new</span>
+</div>
+<div class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container transition-colors group border border-transparent hover:border-outline-variant">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="article">article</span>
+<span class="font-label-md text-label-md">Cover_Letter_Google.pdf</span>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" data-icon="download">download</span>
+</div>
+</div>
+</div>
+<!-- My Notes -->
+</div>
+<!-- Activity Timeline -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm">
+<h3 class="font-headline-sm text-headline-sm mb-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+                            Activity Timeline
+                        </h3>
+<div class="space-y-lg relative before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant">
+<div class="relative pl-lg flex gap-md">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary-container flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[14px] text-on-primary-container" data-icon="videocam">videocam</span>
+</div>
+<div>
+<p class="font-label-md text-label-md">Technical Interview</p>
+<p class="text-secondary text-[12px]">Yesterday, 2:00 PM • With 3 team members</p>
+</div>
+</div>
+<div class="relative pl-lg flex gap-md">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<p class="font-label-md text-label-md">Recruiter Screen</p>
+<p class="text-secondary text-[12px]">Oct 24 • Completed via Phone</p>
+</div>
+</div>
+<div class="relative pl-lg flex gap-md">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="send">send</span>
+</div>
+<div>
+<p class="font-label-md text-label-md">Application Submitted</p>
+<p class="text-secondary text-[12px]">Oct 12 • Portal</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Column -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter"><div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm">
+<h3 class="font-headline-sm text-headline-sm mb-md flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="edit_note">edit_note</span>
+My Notes
+</span>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline">
+<span class="material-symbols-outlined text-[16px]">add</span>
+Add New
+</button>
+</h3>
+<div class="space-y-md mb-md max-h-[400px] overflow-y-auto">
+<div class="p-md bg-surface-container-low rounded-lg border border-outline-variant">
+<p class="text-body-sm text-on-surface mb-2">Discussed the new design system initiative with Sarah. Follow-up expected next Tuesday regarding technical feasibility of the proposed motion framework.</p>
+<p class="text-[10px] text-secondary">Oct 25, 2023 • 2:30 PM</p>
+</div>
+<div class="p-md bg-surface-container-low rounded-lg border border-outline-variant">
+<p class="text-body-sm text-on-surface mb-2">Prepare portfolio focus on the workspace productivity tools for the upcoming technical panel.</p>
+<p class="text-[10px] text-secondary">Oct 20, 2023 • 10:15 AM</p>
+</div>
+</div>
+<div class="relative">
+<textarea class="w-full h-24 bg-white border border-outline-variant rounded-lg p-md font-body-sm text-body-sm focus:ring-2 focus:ring-primary focus:border-transparent mb-sm resize-none" placeholder="Type a new note..."></textarea>
+<button class="w-full py-md bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:opacity-90 transition-all shadow-sm">Save Note</button>
+</div>
+</div>
+<!-- Practice Questions Widget -->
+<!-- Upcoming Events -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm">
+<h3 class="font-headline-sm text-headline-sm mb-md flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="event">event</span>
+                                Next Steps
+                            </span>
+<span class="font-label-sm text-label-sm text-primary cursor-pointer hover:underline">See Calendar</span>
+</h3>
+<div class="p-md rounded-lg bg-tertiary-fixed/20 border-l-4 border-tertiary">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md text-on-tertiary-fixed">On-site Interview</span>
+<span class="text-[10px] font-bold text-tertiary uppercase">In 4 Days</span>
+</div>
+<p class="text-body-sm text-on-tertiary-fixed-variant">Nov 15 • 10:00 AM - 2:00 PM</p>
+<div class="mt-md flex items-center gap-2">
+<img alt="Contact avatar" class="w-5 h-5 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5dZdHQf-dQMN5UuJlW3UwdK6RG1yDUnvVOwM51BmIUQValfIvqvN3uO5J9UxvidRtgQ_HLzGnCjBZ4sx6KA6JFfZMGwrrCrLdqYfhHPR6W7v12_v57IfAs16E-q0zVQB3eTd845XXW8m2WyiSN-49GJ8LYvjsV2LsIzfdJXEQNvWV8q9TTPxp6kj4NnncQ8ASXYSLY06cPSHkpwEEQ-CotCxIz8emtkPoB2Dm5ibw0FMinAG7fCsvf-bvEI-pkDSPKC4AoSJzJEnW"/>
+<p class="text-[12px] text-secondary">Coordination with Jane Doe</p>
+</div>
+</div>
+</div>
+<!-- Location Insight -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+<h3 class="font-headline-sm text-headline-sm mb-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="map">map</span>
+                            HQ Location
+                        </h3>
+<div class="h-40 w-full rounded-lg bg-surface-container mb-md relative overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-location="Mountain View" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWZ0BS8P1e7WlLtpadQJuNoGGu6qkn6IEVThKVotfLGJRHNAFpggv03aQC_FUt5irmALCvwPOSDZ0PgTn5359jZpDPTh8prpTkQUFkr7rOTREi2T7LONPSaVWAofi-hr4wciWo_z5_ROLVzscKL0FLbvtt6LFrrV0gGXLR6lHZ-N7THuU91W8Mb4VEAQtE5F91ViVcnpz0scKIKwryYc3M9om_0sGeDouEF9VbnA1bjOQMtYQbGDsFu3Z7cgAG_elb5rZ_ej2L_AmY')"></div>
+<div class="absolute inset-0 bg-black/10"></div>
+<div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold shadow-sm">Googleplex, CA</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                            1600 Amphitheatre Pkwy<br/>
+                            Mountain View, CA 94043
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

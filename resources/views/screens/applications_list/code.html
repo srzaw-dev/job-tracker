@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trackr - Applications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#565e74",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "tertiary": "#994100",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "tertiary-container": "#c05400",
+                    "tertiary-fixed": "#ffdbca",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#ffb599",
+                    "background": "#f8f9ff",
+                    "on-tertiary-fixed": "#341100",
+                    "surface-bright": "#f8f9ff",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#7f2b00",
+                    "outline-variant": "#e2bfb2",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-primary": "#ffb599",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-container": "#cc4900",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "on-tertiary-fixed-variant": "#783200",
+                    "secondary-container": "#dae2fd",
+                    "surface-container-highest": "#d3e4fe",
+                    "primary": "#a33900",
+                    "surface-container-high": "#dce9ff",
+                    "primary-fixed": "#ffdbce",
+                    "on-surface-variant": "#5a4138",
+                    "outline": "#8e7166",
+                    "on-surface": "#0b1c30",
+                    "secondary-fixed": "#dae2fd",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-background": "#0b1c30",
+                    "on-primary-fixed": "#370e00",
+                    "on-secondary-container": "#5c647a",
+                    "inverse-surface": "#213145",
+                    "on-primary-container": "#fffbff",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#a73a00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "margin-mobile": "16px",
+                    "sm": "8px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "gutter": "24px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-[240px] flex flex-col bg-surface-container-lowest dark:bg-surface-dim border-r border-outline-variant dark:border-outline shadow-sm z-50">
+<div class="flex flex-col h-full py-lg">
+<div class="px-lg mb-xl">
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Trackr</h1>
+<p class="font-label-sm text-label-sm text-secondary">Career Manager</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-lg py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-3 px-lg py-3 text-primary dark:text-primary-fixed-dim border-l-4 border-primary dark:border-primary-fixed-dim bg-primary-container/10 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">work</span>
+                    Applications
+                </a>
+<a class="flex items-center gap-3 px-lg py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">description</span>
+                    Documents
+                </a>
+<a class="flex items-center gap-3 px-lg py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</nav>
+<div class="mt-auto px-lg border-t border-outline-variant pt-lg">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-8 h-8 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnQpzC0EXlBfgALcec6XQretFe5PqlMsTnn0kZUTc_sist2Xv0XrVrFqIbhK8TpfJ9fMcwsLdz-r0lB1bBPwzEmQcR9pFVVRDcSWfM1vIUJs2n72ajYnHRpGizbbkzt_ZN9yZ2HjfhSKK2M-psO-xi5tfeRh5MODGYUqLFgqIuAiBEMZsJmjsQhdu6leJu5Mr-AmR5otRpqHMkKNkkIPBCUm27z-BKD8XFZ8UuX3gLiJuPVFOs9-QP60j5dXEARXYjQLFVdE9P9SBb"/>
+<div class="overflow-hidden">
+<p class="font-label-md text-label-md truncate">Alex Rivera</p>
+<p class="text-[10px] text-secondary truncate">Pro Account</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-40 h-16 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm">
+<div class="flex justify-between items-center px-lg h-full ml-[240px] w-[calc(100%-240px)]">
+<div class="flex items-center bg-surface-container rounded-full px-4 py-1.5 w-96 max-w-full">
+<span class="material-symbols-outlined text-secondary mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm font-body-sm w-full" placeholder="Search applications..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-container dark:hover:bg-surface-container-high rounded-full p-2 transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<button class="hover:bg-surface-container dark:hover:bg-surface-container-high rounded-full p-2 transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">help_outline</span>
+</button>
+<div class="h-8 w-px bg-outline-variant mx-2"></div>
+<button class="flex items-center gap-2 font-label-md text-label-md text-primary">
+<span class="material-symbols-outlined">add_circle</span>
+                    New Job
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[240px] p-lg max-w-[1400px]">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-lg gap-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Applications</h2>
+<p class="font-body-md text-body-md text-secondary">Manage and track your job application pipeline</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-lowest border border-outline-variant px-4 py-2 rounded-lg flex items-center gap-2 font-label-md text-label-md text-secondary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+                    Export CSV
+                </button>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-lg flex items-center gap-2 font-label-md text-label-md shadow-sm hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Add Application
+                </button>
+</div>
+</div>
+<!-- Summary Cards (Bento-style Grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-xl">
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-secondary bg-surface-container p-2 rounded-lg">send</span>
+<span class="text-secondary font-label-sm">+4 this week</span>
+</div>
+<p class="text-secondary font-label-md mb-1 uppercase tracking-wider">Applied</p>
+<h3 class="text-[32px] font-bold text-on-surface">42</h3>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm border-l-4 border-primary">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary bg-primary-container/10 p-2 rounded-lg">forum</span>
+<span class="text-primary font-label-sm">Live</span>
+</div>
+<p class="text-secondary font-label-md mb-1 uppercase tracking-wider">Interviews</p>
+<h3 class="text-[32px] font-bold text-on-surface">8</h3>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-green-600 bg-green-50 p-2 rounded-lg">verified</span>
+<span class="text-green-600 font-label-sm">High Success</span>
+</div>
+<p class="text-secondary font-label-md mb-1 uppercase tracking-wider">Offered</p>
+<h3 class="text-[32px] font-bold text-on-surface">3</h3>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-error bg-error-container/20 p-2 rounded-lg">cancel</span>
+<span class="text-error font-label-sm">-2%</span>
+</div>
+<p class="text-secondary font-label-md mb-1 uppercase tracking-wider">Rejected</p>
+<h3 class="text-[32px] font-bold text-on-surface">15</h3>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md mb-md flex flex-wrap items-center gap-md">
+<div class="flex items-center gap-2 flex-1 min-w-[200px]">
+<span class="material-symbols-outlined text-secondary text-[20px]">filter_list</span>
+<span class="font-label-md text-label-md text-on-surface">Filters:</span>
+<div class="flex gap-2">
+<select class="border border-outline-variant rounded-lg px-3 py-1.5 text-body-sm font-body-sm bg-surface-container-low focus:ring-primary focus:border-primary">
+<option>All Statuses</option>
+<option>Applied</option>
+<option>Interviewing</option>
+<option>Offered</option>
+<option>Rejected</option>
+</select>
+<select class="border border-outline-variant rounded-lg px-3 py-1.5 text-body-sm font-body-sm bg-surface-container-low focus:ring-primary focus:border-primary">
+<option>All Companies</option>
+<option>TechCorp</option>
+<option>InnovateX</option>
+<option>CloudScale</option>
+</select>
+<div class="relative">
+<input class="border border-outline-variant rounded-lg pl-9 pr-3 py-1.5 text-body-sm font-body-sm bg-surface-container-low focus:ring-primary focus:border-primary" placeholder="Date Range" type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-1.5 text-[18px] text-secondary">calendar_today</span>
+</div>
+</div>
+</div>
+<button class="text-primary font-label-md hover:underline">Clear all filters</button>
+</div>
+<!-- Data Table Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="px-lg py-4 font-label-md text-label-md text-secondary">Company</th>
+<th class="px-lg py-4 font-label-md text-label-md text-secondary">Job Title</th>
+<th class="px-lg py-4 font-label-md text-label-md text-secondary">Status</th>
+<th class="px-lg py-4 font-label-md text-label-md text-secondary">Source</th>
+<th class="px-lg py-4 font-label-md text-label-md text-secondary">App. Date</th>
+<th class="px-lg py-4 font-label-md text-label-md text-secondary text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Table Row 1 -->
+<tr class="hover:bg-surface-container-lowest/50 transition-colors">
+<td class="px-lg py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center">
+<img alt="TechCorp Logo" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzLEnr1ENSqgOvh_UcLkGJmEEjk4c3AaBULomFo-wGK_rthdFPLu73uRLPxbEFM4wAZhWkNHwu6IalEkl0WxXvHuc_ixcrN_WUW3uoglfYhJ88vDBdOi5RA0cUugGGcx-YvV2N99xthrorgaXnD53k38X5101uZcH6dSEmNjtI87pViDfsXr0Znl2Q2rzLcEdWdzzlA3SETllmfYEM6byd_dhi_ZO6KJtLqQz5m3JEeTNt-4-YBdn0c_mHRjI-5lsagq4h5rhg3KYt"/>
+</div>
+<span class="font-label-md text-label-md">TechCorp Inc.</span>
+</div>
+</td>
+<td class="px-lg py-4 font-body-md text-body-md text-on-surface">Senior Product Designer</td>
+<td class="px-lg py-4">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-[12px] font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span>
+                                    Interviewing
+                                </span>
+</td>
+<td class="px-lg py-4 font-body-sm text-body-sm text-secondary">LinkedIn</td>
+<td class="px-lg py-4 font-body-sm text-body-sm text-secondary">Oct 24, 2023</td>
+<td class="px-lg py-4 text-right">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-all">
+<span class="material-symbols-outlined text-secondary">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Table Row 2 -->
+<tr class="hover:bg-surface-container-lowest/50 transition-colors">
+<td class="px-lg py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center">
+<img alt="InnovateX Logo" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfDOG7CfQbH1uG4Q_zHcWCMzDYwYUiVQrLITMKhUU23p3UIeRXL3g75lKHdBTODXtlW8zcyvptPdN_hAt0n_CkbbPrOX879Z_sOj9t5Aa0OWU7bJBq8WE9o0ybVZQ50jxbu_nLApTR-_kuyddIjPGSaP0GFjSxD198oNq4px8nZ9u-Nak7KyNZWhAMPNjNlATvrFiFjSoGAiAwAdxrFCv-9wmICIwnQpXIGa20295te6gsquGuwCWT5-z-sAjXbnZgBZlYz1UIYqtY"/>
+</div>
+<span class="font-label-md text-label-md">InnovateX</span>
+</div>
+</td>
+<td class="px-lg py-4 font-body-md text-body-md text-on-surface">UX Researcher</td>
+<td class="px-lg py-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[12px] font-bold inline-flex items-center gap-1">
+                                    Applied
+                                </span>
+</td>
+<td class="px-lg py-4 font-body-sm text-body-sm text-secondary">Referral</td>
+<td class="px-lg py-4 font-body-sm text-body-sm text-secondary">Oct 22, 2023</td>
+<td class="px-lg py-4 text-right">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-all">
+<span class="material-symbols-outlined text-secondary">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Table Row 3 -->
+<tr class="hover:bg-surface-container-lowest/50 transition-colors">
+<td class="px-lg py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center">
+<img alt="CloudScale Logo" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjJMVBAwXxi8dvD7aCuXxYRsXtvZxVt3Me4jHGR1zzIoTNGWkTj3Zj7YPd1c4tn1LuaGJZp--JsioPuMzFZdzNNdX-XtUCEZApMoAJbUq4sOgofvxVAHAN8oz5pt2WMui-ZRM9dW5MGxKgFVL1E-sA4bA5Jf8pEbRkwcmSQNGW3HFmqQxVQjTAFfe7DjdrAKLIjlmDDK8EbTa_k__UP6FrJPD4_qE90tBvSw9wePguSHPgoLG-taQQpbzhCZUM2gdMG4jyUwYpbmRJ"/>
+</div>
+<span class="font-label-md text-label-md">CloudScale</span>
+</div>
+</td>
+<td class="px-lg py-4 font-body-md text-body-md text-on-surface">Frontend Architect</td>
+<td class="px-lg py-4">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold inline-flex items-center gap-1">
+                                    Offered
+                                </span>
+</td>
+<td class="px-lg py-4 font-body-sm text-body-sm text-secondary">Direct Site</td>
+<td class="px-lg py-4 font-body-sm text-body-sm text-secondary">Oct 18, 2023</td>
+<td class="px-lg py-4 text-right">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-all">
+<span class="material-symbols-outlined text-secondary">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Table Row 4 -->
+<tr class="hover:bg-surface-container-lowest/50 transition-colors">
+<td class="px-lg py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center">
+<img alt="MetaData Logo" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkyG8DSinxqmm7a7TMK2LyVYWMtrHESq6nC-es-DG4fMIZZeiqSkZ2rS5jSJxuNpoFkZ7gG2t8_hlNXjHLaw-XIS0s1BMhu0ag2ftMbNqvzBOIm_nM_WeWfghS2qvTCceZOw6wLRD3UPWA4SPM8F5WTawAfTOtj2ahuKsOmjSgYFoAtDwj0oarCTzW1jEXnGJmLVK512yuSrQo6EMRh5yywHV4zaABGujJqBKH5mj-Bfy6ZlDyz9uiYKhi3zdaYNPF3z0fQvfubqST"/>
+</div>
+<span class="font-label-md text-label-md">MetaData</span>
+</div>
+</td>
+<td class="px-lg py-4 font-body-md text-body-md text-on-surface">Interface Engineer</td>
+<td class="px-lg py-4">
+<span class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-[12px] font-bold inline-flex items-center gap-1">
+                                    Rejected
+                                </span>
+</td>
+<td class="px-lg py-4 font-body-sm text-body-sm text-secondary">Hired.com</td>
+<td class="px-lg py-4 font-body-sm text-body-sm text-secondary">Oct 15, 2023</td>
+<td class="px-lg py-4 text-right">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-all">
+<span class="material-symbols-outlined text-secondary">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-lg py-4 bg-surface-container-low border-t border-outline-variant flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary">Showing 1 to 10 of 42 entries</span>
+<div class="flex items-center gap-2">
+<button class="p-2 border border-outline-variant rounded-lg text-secondary opacity-50 cursor-not-allowed">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-1">
+<button class="w-8 h-8 bg-primary text-on-primary rounded-lg font-label-md text-label-md">1</button>
+<button class="w-8 h-8 hover:bg-surface-container-high rounded-lg font-label-md text-label-md transition-all">2</button>
+<button class="w-8 h-8 hover:bg-surface-container-high rounded-lg font-label-md text-label-md transition-all">3</button>
+<span class="px-2 self-end text-secondary">...</span>
+<button class="w-8 h-8 hover:bg-surface-container-high rounded-lg font-label-md text-label-md transition-all">5</button>
+</div>
+<button class="p-2 border border-outline-variant rounded-lg text-secondary hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Career Insights Glassmorphism Card -->
+<div class="mt-xl grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary to-tertiary p-1">
+<div class="bg-white/95 backdrop-blur-md rounded-[10px] p-lg h-full flex items-center gap-lg">
+<div class="w-24 h-24 flex-shrink-0 bg-primary-fixed rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[40px]" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Trackr Insight</h4>
+<p class="font-body-md text-body-md text-secondary">Your current interview conversion rate is 19%. Candidates with optimized resumes in your field average 25%. Consider refreshing your CV.</p>
+<button class="mt-4 text-primary font-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                            View Optimization Guide <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest border border-outline-variant rounded-xl p-lg flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Application Velocity</h4>
+<div class="flex items-end gap-3 h-24 mb-4">
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[40%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[60%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[30%]"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[90%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[50%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[70%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[45%]"></div>
+</div>
+</div>
+<div class="flex justify-between items-center text-secondary font-label-sm uppercase tracking-widest">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span class="text-primary font-bold">Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB for adding a new application -->
+<button class="fixed bottom-lg right-lg w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</body></html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerPath - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "on-surface": "#0b1c30",
+                    "tertiary": "#994100",
+                    "surface-tint": "#a73a00",
+                    "on-secondary-fixed": "#131b2e",
+                    "inverse-primary": "#ffb599",
+                    "on-tertiary-fixed": "#341100",
+                    "on-error": "#ffffff",
+                    "background": "#f8f9ff",
+                    "tertiary-container": "#c05400",
+                    "surface": "#f8f9ff",
+                    "secondary": "#565e74",
+                    "primary-fixed-dim": "#ffb599",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "primary-fixed": "#ffdbce",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "surface-bright": "#f8f9ff",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#5c647a",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "surface-container-high": "#dce9ff",
+                    "on-primary-fixed-variant": "#7f2b00",
+                    "on-primary-fixed": "#370e00",
+                    "tertiary-fixed": "#ffdbca",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#d3e4fe",
+                    "outline": "#8e7166",
+                    "surface-variant": "#d3e4fe",
+                    "outline-variant": "#e2bfb2",
+                    "primary-container": "#cc4900",
+                    "on-surface-variant": "#5a4138",
+                    "on-tertiary-container": "#fffbff",
+                    "on-primary-container": "#fffbff",
+                    "secondary-container": "#dae2fd",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "primary": "#a33900",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#783200",
+                    "on-background": "#0b1c30",
+                    "surface-container": "#e5eeff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "margin-desktop": "40px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-60 flex flex-col py-margin-desktop bg-surface border-r border-outline-variant">
+<div class="px-lg mb-xl">
+<h1 class="text-headline-md font-headline-md font-bold text-primary">CareerPath</h1>
+<p class="text-label-sm text-secondary">Job Tracker</p>
+</div>
+<nav class="flex-grow space-y-xs">
+<a class="flex items-center gap-md px-lg py-sm text-secondary hover:bg-surface-container-high transition-colors active:scale-95 duration-100 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-sm text-secondary hover:bg-surface-container-high transition-colors active:scale-95 duration-100 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span>Applications</span>
+</a>
+<a class="flex items-center gap-md px-lg py-sm text-secondary hover:bg-surface-container-high transition-colors active:scale-95 duration-100 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Documents</span>
+</a>
+<a class="flex items-center gap-md px-lg py-sm text-primary font-bold border-l-2 border-primary bg-surface-container-low transition-colors active:scale-95 duration-100 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="px-lg mt-auto">
+<button class="w-full py-md bg-primary-container text-on-primary-container rounded-lg font-label-md hover:opacity-90 transition-opacity">
+                Pro Upgrade
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-60 min-h-screen">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-40 w-full flex items-center justify-between px-margin-desktop py-sm bg-surface/80 backdrop-blur-md border-b border-outline-variant shadow-sm">
+<div class="flex items-center gap-xl flex-grow">
+<div class="relative w-full max-w-md focus-within:ring-2 focus-within:ring-primary rounded-lg">
+<span class="absolute left-md top-1/2 -translate-y-1/2 text-secondary material-symbols-outlined" data-icon="search">search</span>
+<input class="w-full pl-xl pr-md py-xs bg-surface-container-low border-none rounded-lg font-body-sm focus:ring-0" placeholder="Search settings..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<button class="text-secondary hover:text-primary transition-all p-xs flex items-center">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-secondary hover:text-primary transition-all p-xs flex items-center">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A professional and friendly close-up portrait of a young woman with a warm smile, set against a soft, out-of-focus office background with natural light. The visual style is crisp and modern, utilizing a high-key lighting setup that aligns with a professional SaaS platform aesthetic. The color palette is clean, featuring soft neutrals and vibrant orange highlights consistent with the energetic utility theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfbFpMe-xKOFYP2m0XKoDeemhCo_p83bkTKN7PxvAg_vBFDg-M-r5w2vuzEhoHuPDuu080TM8yLT-TG-DJovYfYhelN6ACixXegQMf4FGHeRKTO3kvWTwA4W3NYoExB6zkPmwCMiPlhewdNn8jiGMGw5oL9iLYVlTsxlLxICWR7_v2OrI1PNwfH5rcHhO7GsHIsGo5UZ-w51P22AxRjHLGVJINU58BKe_qy17XfK6BMRJRPnRII1tk9II6fjzDEfOvcQSFMJZdgizt"/>
+</div>
+</div>
+</header>
+<!-- Settings Canvas -->
+<div class="p-margin-desktop max-w-4xl">
+<header class="mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Account Management</h2>
+<p class="font-body-md text-body-md text-secondary">Control your personal information and security preferences.</p>
+</header>
+<div class="space-y-gutter">
+<!-- Profile Section Card -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm">
+<div class="flex items-start gap-lg mb-lg">
+<div class="p-sm bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Profile Details</h3>
+<p class="font-body-sm text-body-sm text-secondary">Update your name and primary contact email.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Full Name</label>
+<input class="w-full px-md py-sm bg-surface border border-outline-variant rounded-lg font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="text" value="Alex Rivera"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Email Address</label>
+<input class="w-full px-md py-sm bg-surface border border-outline-variant rounded-lg font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="email" value="alex.rivera@careerpath.io"/>
+</div>
+</div>
+<div class="mt-lg pt-lg border-t border-outline-variant flex justify-end">
+<button class="bg-[#EA580C] text-on-primary px-xl py-md rounded-lg font-label-md hover:bg-tertiary transition-colors active:scale-95 duration-100">
+                            Update Profile
+                        </button>
+</div>
+</section>
+<!-- Password Section Card -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm">
+<div class="flex items-start gap-lg mb-lg">
+<div class="p-sm bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Security</h3>
+<p class="font-body-sm text-body-sm text-secondary">Change your password to keep your account secure.</p>
+</div>
+</div>
+<div class="space-y-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Current Password</label>
+<input class="w-full px-md py-sm bg-surface border border-outline-variant rounded-lg font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="••••••••" type="password"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">New Password</label>
+<input class="w-full px-md py-sm bg-surface border border-outline-variant rounded-lg font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="••••••••" type="password"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Confirm Password</label>
+<input class="w-full px-md py-sm bg-surface border border-outline-variant rounded-lg font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex items-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="info">info</span>
+<p class="font-body-sm text-body-sm italic">Password must be at least 12 characters long.</p>
+</div>
+</div>
+<div class="mt-lg pt-lg border-t border-outline-variant flex justify-end">
+<button class="border border-[#CBD5E1] text-[#334155] px-xl py-md rounded-lg font-label-md hover:bg-surface-container-high transition-colors active:scale-95 duration-100">
+                            Change Password
+                        </button>
+</div>
+</section>
+<!-- Sessions & Logout -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm">
+<div class="flex items-center justify-between flex-wrap gap-lg">
+<div class="flex items-start gap-lg">
+<div class="p-sm bg-error/10 rounded-lg text-error">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Account Session</h3>
+<p class="font-body-sm text-body-sm text-secondary">Logout from all devices to clear your active session.</p>
+</div>
+</div>
+<button class="bg-error text-on-error px-xl py-md rounded-lg font-label-md hover:opacity-90 transition-opacity active:scale-95 duration-100 flex items-center gap-sm">
+<span class="material-symbols-outlined" data-icon="power_settings_new">power_settings_new</span>
+                            Logout Session
+                        </button>
+</div>
+</section>
+<!-- Danger Zone (Asymmetric/Modern Layout addition) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 bg-gradient-to-br from-error-container/20 to-error-container/40 border border-error/20 rounded-xl p-lg">
+<h4 class="font-headline-sm text-headline-sm text-error mb-xs">Danger Zone</h4>
+<p class="font-body-sm text-body-sm text-on-error-container mb-lg">Permanently delete your account and all associated job applications, documents, and tracking data. This action is irreversible.</p>
+<button class="text-error font-label-md hover:underline decoration-2 underline-offset-4">Delete Account Forever</button>
+</div>
+<div class="bg-primary/5 border border-primary/10 rounded-xl p-lg flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[48px] text-primary mb-md" data-icon="rocket_launch">rocket_launch</span>
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Help the project grow</h4>
+<p class="font-body-sm text-body-sm text-secondary mb-md">Share CareerPath with a colleague</p>
+<button class="w-full py-sm bg-white border border-outline-variant text-primary font-label-md rounded-lg shadow-sm hover:bg-surface-container-low transition-colors">Refer a Friend</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

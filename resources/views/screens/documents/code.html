@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary": "#ffffff",
+            "inverse-surface": "#213145",
+            "on-surface": "#0b1c30",
+            "tertiary": "#994100",
+            "surface-tint": "#a73a00",
+            "on-secondary-fixed": "#131b2e",
+            "inverse-primary": "#ffb599",
+            "on-tertiary-fixed": "#341100",
+            "on-error": "#ffffff",
+            "background": "#f8f9ff",
+            "tertiary-container": "#c05400",
+            "surface": "#f8f9ff",
+            "secondary": "#565e74",
+            "primary-fixed-dim": "#ffb599",
+            "tertiary-fixed-dim": "#ffb690",
+            "primary-fixed": "#ffdbce",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#cbdbf5",
+            "surface-bright": "#f8f9ff",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#5c647a",
+            "on-secondary-fixed-variant": "#3f465c",
+            "surface-container-high": "#dce9ff",
+            "on-primary-fixed-variant": "#7f2b00",
+            "on-primary-fixed": "#370e00",
+            "tertiary-fixed": "#ffdbca",
+            "inverse-on-surface": "#eaf1ff",
+            "secondary-fixed-dim": "#bec6e0",
+            "error": "#ba1a1a",
+            "surface-container-highest": "#d3e4fe",
+            "outline": "#8e7166",
+            "surface-variant": "#d3e4fe",
+            "outline-variant": "#e2bfb2",
+            "primary-container": "#cc4900",
+            "on-surface-variant": "#5a4138",
+            "on-tertiary-container": "#fffbff",
+            "on-primary-container": "#fffbff",
+            "secondary-container": "#dae2fd",
+            "on-tertiary": "#ffffff",
+            "surface-container-low": "#eff4ff",
+            "primary": "#a33900",
+            "secondary-fixed": "#dae2fd",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#783200",
+            "on-background": "#0b1c30",
+            "surface-container": "#e5eeff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "sm": "8px",
+            "margin-mobile": "16px",
+            "gutter": "24px",
+            "lg": "24px",
+            "md": "16px",
+            "margin-desktop": "40px",
+            "xs": "4px",
+            "xl": "32px",
+            "base": "8px"
+          },
+          "fontFamily": {
+            "body-md": ["Hanken Grotesk"],
+            "label-sm": ["Hanken Grotesk"],
+            "label-md": ["Hanken Grotesk"],
+            "body-sm": ["Hanken Grotesk"],
+            "body-lg": ["Hanken Grotesk"],
+            "headline-sm": ["Hanken Grotesk"],
+            "headline-md": ["Hanken Grotesk"],
+            "headline-lg-mobile": ["Hanken Grotesk"],
+            "headline-lg": ["Hanken Grotesk"]
+          },
+          "fontSize": {
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Hanken Grotesk', sans-serif; background-color: #f8f9ff; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Side Navigation Bar -->
+<aside class="fixed left-0 top-0 h-full w-60 bg-surface dark:bg-on-surface border-r border-outline-variant dark:border-outline flex flex-col py-margin-desktop z-50">
+<div class="px-lg mb-xl">
+<h1 class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">CareerPath</h1>
+<p class="text-body-sm text-secondary">Job Tracker</p>
+</div>
+<nav class="flex-1 px-sm space-y-xs">
+<a class="flex items-center gap-sm px-md py-sm text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high dark:hover:bg-on-secondary-fixed-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high dark:hover:bg-on-secondary-fixed-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-body-md text-body-md">Applications</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm text-primary dark:text-primary-fixed font-bold border-l-2 border-primary dark:border-primary-fixed bg-surface-container-low dark:bg-secondary-fixed-dim/10 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-body-md text-body-md">Documents</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high dark:hover:bg-on-secondary-fixed-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</nav>
+<div class="px-lg mt-auto">
+<button class="w-full py-sm bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:opacity-90 active:scale-95 transition-all">
+        Pro Upgrade
+      </button>
+</div>
+</aside>
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-40 w-full bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant dark:border-outline ml-60 flex items-center justify-between px-margin-desktop py-sm shadow-sm dark:shadow-none">
+<div class="flex items-center gap-lg flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-secondary" data-icon="search">search</span>
+<input class="w-full pl-xl pr-md py-xs bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Search documents..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<button class="flex items-center gap-xs px-lg py-sm bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-body-md" data-icon="add">add</span>
+        Upload Document
+      </button>
+<div class="flex items-center gap-md">
+<button class="p-xs text-secondary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-xs text-secondary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<img alt="User profile" class="w-10 h-10 rounded-full border border-outline-variant object-cover" data-alt="A professional close-up headshot of a smiling man with neat hair, wearing a stylish navy blue blazer. The photo is set against a brightly lit, modern office background with soft bokeh, reflecting a high-energy corporate environment. The lighting is clean and professional, using a bright white and soft blue color palette to match a sophisticated SaaS user interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJSrXrQ4rse2QgokwJzRiHywWzYg706lEEcH52WY-uRb42YfyMcqGF1-otg65SHF-Cgbb3I-KY0BQqxOuFck7pqcdcsdXouRTm_URMlijfGneiVnTo9T7D7GbEVP3cYcAl8s55WtsYo_PQpB3hiL9PHFWfLAHW6S0bZ7L7U_hS4D6veh6vJ5zH0YO0Akugz6ppuOaEvCWklsT9W1_A-T263allzhZbeeQT0vmQU-DPM3RiS7VopI4L_VZ7jq17ZtzEjYudRuifDqfu"/>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="ml-60 p-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<!-- Stats / Summary Bento-ish Cards -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-xl">
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-sm">
+<span class="material-symbols-outlined text-primary p-xs bg-primary-fixed rounded-lg" data-icon="description">description</span>
+<span class="text-label-sm font-label-sm text-secondary">+2 this week</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">12</h3>
+<p class="font-body-sm text-body-sm text-secondary">Total Documents</p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-sm">
+<span class="material-symbols-outlined text-tertiary p-xs bg-tertiary-fixed rounded-lg" data-icon="history">history</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">V4.2</h3>
+<p class="font-body-sm text-body-sm text-secondary">Latest Version</p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-sm">
+<span class="material-symbols-outlined text-secondary p-xs bg-secondary-container rounded-lg" data-icon="task_alt">task_alt</span>
+<span class="text-label-sm font-label-sm text-primary">85% active</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">24</h3>
+<p class="font-body-sm text-body-sm text-secondary">Active Submissions</p>
+</div>
+<div class="bg-primary text-on-primary p-lg rounded-xl shadow-md relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline-sm text-headline-sm mb-xs">Storage</h3>
+<div class="w-full bg-on-primary/20 h-2 rounded-full mb-xs">
+<div class="bg-on-primary h-full rounded-full" style="width: 65%"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary/80">1.2 GB of 2.0 GB used</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[80px]" data-icon="cloud">cloud</span>
+</div>
+</div>
+</div>
+<!-- Document Table -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+<div class="px-lg py-md border-b border-outline-variant flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Managed Documents</h2>
+<div class="flex gap-sm">
+<button class="px-md py-xs border border-outline-variant rounded-lg text-label-md font-label-md text-secondary hover:bg-surface-container-high transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-body-md" data-icon="filter_list">filter_list</span>
+              Filter
+            </button>
+<button class="px-md py-xs border border-outline-variant rounded-lg text-label-md font-label-md text-secondary hover:bg-surface-container-high transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-body-md" data-icon="sort">sort</span>
+              Sort
+            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-lg py-md font-label-md text-label-md text-secondary border-b border-outline-variant">Document Name</th>
+<th class="px-lg py-md font-label-md text-label-md text-secondary border-b border-outline-variant">Type</th>
+<th class="px-lg py-md font-label-md text-label-md text-secondary border-b border-outline-variant">Version</th>
+<th class="px-lg py-md font-label-md text-label-md text-secondary border-b border-outline-variant">Used In</th>
+<th class="px-lg py-md font-label-md text-label-md text-secondary border-b border-outline-variant">Date Added</th>
+<th class="px-lg py-md font-label-md text-label-md text-secondary border-b border-outline-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-md">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="picture_as_pdf">picture_as_pdf</span>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Senior_UX_Designer_Resume_2024</p>
+<p class="font-body-sm text-body-sm text-secondary">420 KB</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md">
+<span class="px-sm py-xs bg-secondary-container text-on-secondary-container text-label-sm font-label-sm rounded-full">CV</span>
+</td>
+<td class="px-lg py-md font-body-md text-body-md text-on-surface">v3.2</td>
+<td class="px-lg py-md font-body-md text-body-md text-on-surface">14 Applications</td>
+<td class="px-lg py-md font-body-md text-body-md text-secondary">Oct 12, 2023</td>
+<td class="px-lg py-md text-right">
+<div class="flex justify-end gap-sm">
+<button class="p-xs text-secondary hover:text-primary transition-all" title="View/Download">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+<button class="p-xs text-secondary hover:text-primary transition-all" title="Edit">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-xs text-secondary hover:text-error transition-all" title="Delete">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-md">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Google_Lead_Product_CoverLetter</p>
+<p class="font-body-sm text-body-sm text-secondary">15 KB</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md">
+<span class="px-sm py-xs bg-tertiary-fixed text-on-tertiary-fixed-variant text-label-sm font-label-sm rounded-full">Cover Letter</span>
+</td>
+<td class="px-lg py-md font-body-md text-body-md text-on-surface">v1.0</td>
+<td class="px-lg py-md font-body-md text-body-md text-on-surface">1 Application</td>
+<td class="px-lg py-md font-body-md text-body-md text-secondary">Oct 14, 2023</td>
+<td class="px-lg py-md text-right">
+<div class="flex justify-end gap-sm">
+<button class="p-xs text-secondary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+<button class="p-xs text-secondary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-xs text-secondary hover:text-error transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-md">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="folder_zip">folder_zip</span>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Design_Portfolio_Case_Studies_24</p>
+<p class="font-body-sm text-body-sm text-secondary">12.5 MB</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md">
+<span class="px-sm py-xs bg-primary-fixed text-on-primary-fixed-variant text-label-sm font-label-sm rounded-full">Portfolio</span>
+</td>
+<td class="px-lg py-md font-body-md text-body-md text-on-surface">v2.4</td>
+<td class="px-lg py-md font-body-md text-body-md text-on-surface">9 Applications</td>
+<td class="px-lg py-md font-body-md text-body-md text-secondary">Sep 28, 2023</td>
+<td class="px-lg py-md text-right">
+<div class="flex justify-end gap-sm">
+<button class="p-xs text-secondary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+<button class="p-xs text-secondary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-xs text-secondary hover:text-error transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-md">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="article">article</span>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Recommendation_Letter_Smith</p>
+<p class="font-body-sm text-body-sm text-secondary">88 KB</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md">
+<span class="px-sm py-xs bg-secondary-container text-on-secondary-container text-label-sm font-label-sm rounded-full">Other</span>
+</td>
+<td class="px-lg py-md font-body-md text-body-md text-on-surface">v1.0</td>
+<td class="px-lg py-md font-body-md text-body-md text-on-surface">0 Applications</td>
+<td class="px-lg py-md font-body-md text-body-md text-secondary">Aug 15, 2023</td>
+<td class="px-lg py-md text-right">
+<div class="flex justify-end gap-sm">
+<button class="p-xs text-secondary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+<button class="p-xs text-secondary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-xs text-secondary hover:text-error transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-lg py-md bg-surface-container-low border-t border-outline-variant flex items-center justify-between">
+<p class="font-body-sm text-body-sm text-secondary">Showing 4 of 12 documents</p>
+<div class="flex gap-sm">
+<button class="p-xs border border-outline-variant rounded-lg text-secondary disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-xs border border-outline-variant rounded-lg text-secondary hover:bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Action Cards Section -->
+<div class="mt-xl grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex items-center gap-lg bg-surface-container p-lg rounded-xl border border-outline-variant">
+<div class="bg-primary-fixed p-md rounded-full">
+<span class="material-symbols-outlined text-primary text-headline-md" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">AI Resume Optimizer</h4>
+<p class="font-body-md text-body-md text-secondary">Scan your document against job descriptions to increase your match score.</p>
+<button class="mt-sm font-label-md text-label-md text-primary hover:underline">Try Optimizer</button>
+</div>
+</div>
+<div class="flex items-center gap-lg bg-surface-container p-lg rounded-xl border border-outline-variant">
+<div class="bg-tertiary-fixed p-md rounded-full">
+<span class="material-symbols-outlined text-tertiary text-headline-md" data-icon="history_edu">history_edu</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Cover Letter Builder</h4>
+<p class="font-body-md text-body-md text-secondary">Generate tailored cover letters in seconds based on your existing documents.</p>
+<button class="mt-sm font-label-md text-label-md text-primary hover:underline">Start Writing</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

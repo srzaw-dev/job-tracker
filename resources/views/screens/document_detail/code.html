@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trackr - Document Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-fixed": "#341100",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#cc4900",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-low": "#eff4ff",
+                        "inverse-primary": "#ffb599",
+                        "outline-variant": "#e2bfb2",
+                        "on-primary-fixed-variant": "#7f2b00",
+                        "surface-variant": "#d3e4fe",
+                        "surface": "#f8f9ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#994100",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "secondary": "#565e74",
+                        "background": "#f8f9ff",
+                        "primary-fixed-dim": "#ffb599",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdbca",
+                        "tertiary-container": "#c05400",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-secondary-container": "#5c647a",
+                        "inverse-surface": "#213145",
+                        "on-primary-fixed": "#370e00",
+                        "on-background": "#0b1c30",
+                        "inverse-on-surface": "#eaf1ff",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "secondary-fixed": "#dae2fd",
+                        "outline": "#8e7166",
+                        "on-surface": "#0b1c30",
+                        "surface-tint": "#a73a00",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#131b2e",
+                        "surface-container": "#e5eeff",
+                        "on-primary-container": "#fffbff",
+                        "surface-dim": "#cbdbf5",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#5a4138",
+                        "primary-fixed": "#ffdbce",
+                        "surface-container-high": "#dce9ff",
+                        "primary": "#a33900",
+                        "surface-container-highest": "#d3e4fe",
+                        "secondary-container": "#dae2fd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "margin-desktop": "40px",
+                        "md": "16px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "sm": "8px",
+                        "xl": "32px",
+                        "base": "8px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<aside class="bg-surface dark:bg-inverse-surface h-screen w-[240px] fixed left-0 top-0 border-r border-outline-variant dark:border-on-surface-variant shadow-sm flex flex-col h-full py-6 z-50">
+<div class="px-6 mb-8">
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Trackr</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Application Manager</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-label-md text-label-md">Applications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary dark:text-primary-fixed-dim border-l-2 border-primary font-bold bg-primary-container/10 cursor-pointer active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="description" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-label-md text-label-md">Documents</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full bg-primary text-on-primary py-3 px-4 rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+                New Application
+            </button>
+</div>
+</aside>
+<header class="fixed top-0 right-0 w-[calc(100%-240px)] h-16 bg-surface-bright dark:bg-surface-dim border-b border-outline-variant dark:border-on-surface-variant shadow-sm flex justify-between items-center px-lg ml-[240px] z-40">
+<div class="flex items-center w-1/3">
+<div class="relative w-full max-w-md focus-within:ring-2 focus-within:ring-primary rounded-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container border-none rounded-full py-2 pl-10 pr-4 text-body-md font-body-md focus:ring-0" placeholder="Search applications..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-container dark:hover:bg-inverse-surface rounded-full p-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-surface-container dark:hover:bg-inverse-surface rounded-full p-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="ml-[240px] pt-16 min-h-screen p-gutter">
+<div class="max-w-6xl mx-auto space-y-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]" data-icon="description">description</span>
+                        CV
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Senior_UX_Designer_Resume_2024.pdf</h2>
+</div>
+<div class="flex gap-3">
+<button class="bg-white border border-outline text-on-surface px-6 py-2 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:bg-surface-container transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+                        Edit
+                    </button>
+<button class="bg-[#EA580C] text-white px-6 py-2 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:opacity-90 transition-opacity shadow-sm active:scale-95">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                        Download
+                    </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-4 space-y-gutter">
+<section class="bg-white border border-outline-variant rounded-xl p-6 shadow-[0px_1px_3px_rgba(15,23,42,0.08)]">
+<h3 class="font-headline-sm text-headline-sm mb-6 text-on-surface">File Information</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-high p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="file_present">file_present</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">File Size</p>
+<p class="text-body-md font-body-md text-on-surface">1.2 MB</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-high p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">Version</p>
+<div class="flex items-center gap-2">
+<p class="text-body-md font-body-md text-on-surface">v2.4.0</p>
+<span class="bg-primary-container text-on-primary-container text-[10px] px-2 py-0.5 rounded-full font-bold">LATEST</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-high p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">Upload Date</p>
+<p class="text-body-md font-body-md text-on-surface">March 12, 2024</p>
+</div>
+</div>
+</div>
+</section>
+<section class="relative overflow-hidden bg-primary rounded-xl p-6 text-on-primary shadow-lg">
+<div class="relative z-10">
+<h4 class="font-headline-sm text-headline-sm mb-2">Portfolio Link</h4>
+<p class="text-body-sm mb-4 opacity-90">Attached portfolio references used with this CV version.</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-colors" href="#">
+                                View Portfolio <span class="material-symbols-outlined text-[18px]" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+<div class="absolute -right-12 -bottom-12 opacity-10">
+<span class="material-symbols-outlined text-[160px]" data-icon="link">link</span>
+</div>
+</section>
+</div>
+<div class="lg:col-span-8 space-y-gutter">
+<section class="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-[0px_1px_3px_rgba(15,23,42,0.08)]">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Used in Applications</h3>
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm">3 Total</span>
+</div>
+<div class="divide-y divide-outline-variant">
+<div class="p-6 flex items-center justify-between hover:bg-surface-bright transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg border border-outline-variant flex items-center justify-center bg-surface-container-lowest overflow-hidden">
+<img alt="Google Logo" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn_m01VwnKxebuLVusrydaP92NHaPiLxaXYezeREu4_cSxvMHr4N1_DZ5505sBby0z7FxH5R-NiABdZE9GXeDV3jzeqwa_2hpEqdZyDnC8_4RUIj-Ofn5BBfhvK8r_R5TTE5uald2KDgoT2YiYQq56m9BCSLw34hNlrVKXx3hLqY4VUg2NuL1JrfDGYYd4GOLJr_MDd-j3TPIwZDSYf9NSnxTcsVFmeD5Aj9cAjwPJ6PofSkWVypo9b7OLTN-41dKHmIWeagao7v9w"/>
+</div>
+<div>
+<h4 class="font-body-md font-bold text-on-surface group-hover:text-primary transition-colors">Google</h4>
+<p class="text-body-sm text-on-surface-variant">Senior Product Designer</p>
+</div>
+</div>
+<div class="text-right flex items-center gap-8">
+<div class="hidden sm:block">
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">Sent On</p>
+<p class="text-body-sm text-on-surface">Mar 15, 2024</p>
+</div>
+<div class="w-[2px] h-8 bg-[#EA580C] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="p-6 flex items-center justify-between hover:bg-surface-bright transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg border border-outline-variant flex items-center justify-center bg-surface-container-lowest overflow-hidden">
+<img alt="Stripe Logo" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8juCEqhjGL95bktcyw9f7Ooe2f99in1Fo2MBE2Upr-TRpQjMwC2y9B5toQNdZxdbFOzJ8SKmVgjFsRNKX1PqXvyxq0zjSj4m8OGPgVyjXCbGOptr1eL1iYEd1g1P6eso2jnzfInE68D_RQ3dv4zWcb2jiywFS0WGRgJUMaaZEk8M0Cb29znU0As4bxib3ySDxXmZk1nm4MyiI40PxCB6vXdlMGDTKbZEj7IfiK4wa31rP2_D-wKtzMt7n42FV3onkzMTEUC81mk4a"/>
+</div>
+<div>
+<h4 class="font-body-md font-bold text-on-surface group-hover:text-primary transition-colors">Stripe</h4>
+<p class="text-body-sm text-on-surface-variant">Lead UX Architect</p>
+</div>
+</div>
+<div class="text-right flex items-center gap-8">
+<div class="hidden sm:block">
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">Sent On</p>
+<p class="text-body-sm text-on-surface">Mar 20, 2024</p>
+</div>
+<div class="w-[2px] h-8 bg-[#EA580C] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="p-6 flex items-center justify-between hover:bg-surface-bright transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg border border-outline-variant flex items-center justify-center bg-surface-container-lowest overflow-hidden">
+<img alt="Airbnb Logo" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC923dit7pFIk0jiBCL2JmuJrH7EIC3vQ51a2ckqqhFizakyXn_lr25yI_P3fmycoZyzzvJ8zdjtIHfT01RTHG3RzKbuVwS0AXcwGcKeX4BtDvpc5aJrGIrsxilCSl9kvxJ9H7dRfV-4dP3SG4QfsQneOu1MVl0SSn8vz4aIhrg-L-lhEke_jM1fd94q1QXa_nHtH-62KV3lgd44VsvH9ttpQ1WqmAvOErp61FllEbHzBxvS9Fjyx6s5U-J6oWNcD3uWoAvPcw-xJOo"/>
+</div>
+<div>
+<h4 class="font-body-md font-bold text-on-surface group-hover:text-primary transition-colors">Airbnb</h4>
+<p class="text-body-sm text-on-surface-variant">Experience Design Lead</p>
+</div>
+</div>
+<div class="text-right flex items-center gap-8">
+<div class="hidden sm:block">
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">Sent On</p>
+<p class="text-body-sm text-on-surface">Apr 02, 2024</p>
+</div>
+<div class="w-[2px] h-8 bg-[#EA580C] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-white border border-outline-variant rounded-xl p-6 shadow-[0px_1px_3px_rgba(15,23,42,0.08)] flex items-center gap-4">
+<div class="p-4 bg-tertiary-fixed rounded-full text-tertiary">
+<span class="material-symbols-outlined text-[32px]" data-icon="share">share</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Share Document</h4>
+<p class="text-body-sm text-on-surface-variant">Generate a secure temporary link</p>
+</div>
+</div>
+<div class="bg-white border border-outline-variant rounded-xl p-6 shadow-[0px_1px_3px_rgba(15,23,42,0.08)] flex items-center gap-4">
+<div class="p-4 bg-secondary-fixed rounded-full text-secondary">
+<span class="material-symbols-outlined text-[32px]" data-icon="visibility">visibility</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Preview File</h4>
+<p class="text-body-sm text-on-surface-variant">Quick view PDF in browser</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="bg-surface-container-lowest border border-dashed border-outline-variant rounded-xl p-lg flex flex-col items-center justify-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[32px]" data-icon="upload_file">upload_file</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Upload a new version</h3>
+<p class="text-body-md text-on-surface-variant max-w-md mx-auto">Maintain your application history by uploading updated resumes or cover letters. We'll automatically label it v2.4.1.</p>
+</div>
+<button class="bg-white border border-outline text-primary px-8 py-2 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm active:scale-95">
+                    Select New File
+                </button>
+</section>
+</div>
+</main>
+</body></html>
