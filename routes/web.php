@@ -10,6 +10,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('documents', DocumentController::class);
 });
 
-Route::get('/', fn() => redirect()->route('dashboard'));
+Route::get('/', fn() => redirect()->route('dashboard'))->name('home');
 
 require __DIR__.'/settings.php';

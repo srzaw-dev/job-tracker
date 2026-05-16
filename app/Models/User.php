@@ -19,12 +19,13 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable, TwoFactorAuthenticatable;
 
-    public function applications(): HasMany
+    public function applications()
+
     {
         return $this->hasMany(Application::class);
     }
 
-    public function documents(): HasMany
+    public function documents()
     {
         return $this->hasMany(Document::class);
     }

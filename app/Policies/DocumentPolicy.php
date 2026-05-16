@@ -13,7 +13,7 @@ class DocumentPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->id === $document->user_id;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class DocumentPolicy
      */
     public function create(User $user): bool
     {
-        return $user->id === $document->user_id;
+        return true;
     }
 
     /**
@@ -37,7 +37,7 @@ class DocumentPolicy
      */
     public function update(User $user, Document $document): bool
     {
-        rreturn $user->id === $document->user_id;
+        return $user->id === $document->user_id;
     }
 
     /**
